@@ -2,6 +2,16 @@
 
 A CRUD and CRM application developed using Django. This project provides a complete solution for managing customer relationships and performing basic CRUD operations on data. The application features user registration, login, and authentication, allowing users to securely manage their data. Additionally, it includes a modern and responsive user interface built with Bootstrap.
 
+What is CRM?
+CRM stands for Customer Relationship Management. It is a strategy and technology used by businesses to manage and analyze customer interactions and data throughout the customer lifecycle. The goal is to improve customer service relationships, assist in customer retention, and drive sales growth. CRM systems compile customer data across different channels, including contact information, purchase history, and any interactions with customer service representatives.
+
+What is CRUD?
+CRUD stands for Create, Read, Update, and Delete. It refers to the four basic operations that can be performed on data in a database.
+
+Create: Adding new data to the database.
+Read: Retrieving and displaying data from the database.
+Update: Modifying existing data in the database.
+Delete: Removing data from the database.
 
 ## Technologies Used
 
