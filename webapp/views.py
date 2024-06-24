@@ -7,5 +7,5 @@ from django.http import HttpResponse
 def home(request):
 
     # return HttpResponse('Hello World')
-
+    # llamamos de template el template creado llamado index.html 
     return render(request, 'webapp/index.html')
