@@ -1,0 +1,25 @@
+{% extends "webapp/base.html" %}
+
+{% block content   %}
+
+
+    <div ckass="container bg-light shadow-md p-5">
+
+        <h3> Start managing your clients today! </h5>
+
+        <hr>
+        <br>
+
+        <form method ="POST" autocomplete="off">
+
+            {% csrf_token %}
+
+            {{form.as_p}}
+
+
+
+        </form>
+
+    </div>
+
+{% {% endblock %}   %}
