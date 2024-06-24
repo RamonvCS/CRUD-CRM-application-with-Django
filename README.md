@@ -17,6 +17,7 @@ This project uses the following technologies:
 - **Git**: Version control system used to manage the project source code.
 - **GitHub**: Code hosting platform used to collaborate and manage the project repository.
 
+
 ## Images
 
 Here are six images related to the project:
