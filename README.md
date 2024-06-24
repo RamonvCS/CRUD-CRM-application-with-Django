@@ -1,6 +1,7 @@
 # CRUD-CRM-application-with-Django
 
-Currently using `pip` to install Django and using Python to create a CRM/CRUD application.
+A CRUD and CRM application developed using Django. This project provides a complete solution for managing customer relationships and performing basic CRUD operations on data. The application features user registration, login, and authentication, allowing users to securely manage their data. Additionally, it includes a modern and responsive user interface built with Bootstrap.
+
 
 ## Technologies Used
 

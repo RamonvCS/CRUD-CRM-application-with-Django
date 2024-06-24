@@ -1,16 +1,15 @@
 from django.shortcuts import render, redirect
 from .forms import CreateUserForm, LoginForm
 
-from django.contrib.auth.models import auth
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login as auth_login
 
-#----------- Creamos la funcion de Home para el HomePage
+# ----------- Creamos la función de Home para el HomePage
 def home(request): 
 
     # llamamos de template el template creado llamado index.html 
     return render(request, 'webapp/index.html')
 
-# ----------Creamos la funcion de Register
+# ---------- Creamos la función de Register
 def register(request):
 
     form = CreateUserForm()
@@ -32,7 +31,7 @@ def register(request):
 # ---------- Login a user
 def my_login(request):
 
-    form = LoginForm():
+    form = LoginForm()
 
     if request.method == "POST":
 
@@ -40,16 +39,17 @@ def my_login(request):
 
         if form.is_valid():
 
-            username = request>POST.get('username')
+            username = request.POST.get('username')
             password = request.POST.get('password')
 
             user = authenticate(request, username=username, password=password)
 
             if user is not None:
 
-                auth.login(request, user)
+                auth_login(request, user)
 
-                # return redirect('')
+                return redirect('my-login')
 
+    context = {'form': form}
 
-
+    return render(request, 'webapp/my-login.html', context=context)
