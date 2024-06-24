@@ -1,8 +1,9 @@
 .form-layout {
-
     border-radius: 15px;
     width: 500px;
-    
-
-
+    background-color: #e9ecef; /* Color de fondo suave */
+    border: 1px solid #e0e0e0; /* Borde sutil */
+    padding: 20px; /* Espaciado interior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
+
