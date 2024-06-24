@@ -6,4 +6,6 @@ urlpatterns = [
     # Creamos el path para homepage "Views"
     path('', views.home, name=""),
 
+    path('register', views.register, name='register' ),
+
 ]
