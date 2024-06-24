@@ -9,9 +9,18 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     </head>
     <body>
+
+        {% comment %} Navbar  {% endcomment %}
+
+        
+
         <div class="container">
+
             <br>
+
             {% block content %}
+
+
             {% endblock %}
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
