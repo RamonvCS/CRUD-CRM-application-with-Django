@@ -5,11 +5,13 @@
     <h5> Welcome to the dashboard page! {{user}} </h5>
 
     <hr> 
-
-    <a class="btn btn-primary btn-sm" href={% url 'dashboard' %}>
+    {% comment %} Se crea botton para crear un record nuevo que se graba en la base datos {% endcomment %}
+    <a class="btn btn-outline-primary btn-sm" href={% url 'dashboard' %}>
 
         Create a new record
     </a>
+
+    <hr>
 
     {% comment %} Aqui saldra el output de los datos que estan en la base de datos ejemplo nombre {% endcomment %}
     {% for record in records %}
