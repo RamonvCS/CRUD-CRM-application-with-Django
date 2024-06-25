@@ -3,13 +3,15 @@ from .forms import CreateUserForm, LoginForm
 
 from django.contrib.auth import authenticate, login as auth_login
 
+from django.contrib.auth.decorators import login_required
+
 # ----------- Creamos la función de Home para el HomePage
 def home(request): 
 
     # llamamos de template el template creado llamado index.html 
     return render(request, 'webapp/index.html')
 
-# ---------- Creamos la función de Register
+# ---------- Creamos la función de Register User
 def register(request):
 
     form = CreateUserForm()
@@ -53,6 +55,18 @@ def my_login(request):
     context = {'form': form}
 
     return render(request, 'webapp/my-login.html', context=context)
+
+
+# - Dashboard
+
+@login_required(login_url='my-login')
+def dashboard(request):
+
+    return render(request, 'webapp/dashboard.html')
+
+
+
+
 
 #  ----------------------  User Logout
 
