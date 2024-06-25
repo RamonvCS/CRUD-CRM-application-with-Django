@@ -8,10 +8,10 @@ CRM stands for Customer Relationship Management. It is a strategy and technology
 What is CRUD?
 CRUD stands for Create, Read, Update, and Delete. It refers to the four basic operations that can be performed on data in a database.
 
-Create: Adding new data to the database.
-Read: Retrieving and displaying data from the database.
-Update: Modifying existing data in the database.
-Delete: Removing data from the database.
+- Create: Adding new data to the database.
+- Read: Retrieving and displaying data from the database.
+- Update: Modifying existing data in the database.
+- Delete: Removing data from the database.
 
 ## Technologies Used
 
