@@ -6,7 +6,10 @@
 
     <hr> 
 
-    <a class="btn btn-primary btn-sm" href={% url 'dashboard' %}></a>
+    <a class="btn btn-primary btn-sm" href={% url 'dashboard' %}>
+
+        Create a new record
+    </a>
 
     {% comment %} Aqui saldra el output de los datos que estan en la base de datos ejemplo nombre {% endcomment %}
     {% for record in records %}
