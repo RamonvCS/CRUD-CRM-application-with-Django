@@ -3,6 +3,8 @@ from .forms import CreateUserForm, LoginForm
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.decorators import login_required
 
+from .models import Record
+
 # ----------- Creamos la función de HomePage
 def home(request): 
     return render(request, 'webapp/index.html')
@@ -36,7 +38,12 @@ def my_login(request):
 # - Dashboard
 @login_required(login_url='my-login')
 def dashboard(request):
-    return render(request, 'webapp/dashboard.html')
+
+    my_records = Record.objects.all()
+
+    context = {'records': my_records}
+
+    return render(request, 'webapp/dashboard.html', context=context)
 
 #  ----------------------  User Logout
 def user_logout(request):
