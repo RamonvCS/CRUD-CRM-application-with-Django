@@ -26,6 +26,7 @@
                 <th scope="col"> City </th>
                 <th scope="col"> Country </th>
 
+                <th scope="col"> Date joined </th>
                 <th scope="col"> View </th>
 
             </tr>
@@ -34,17 +35,39 @@
 
         <tbody>
 
+        {% if records %}
+            
+            {% for record in records %}
+
             <tr>
 
-                <td>
+                <td> {{record.id}} </td>
+
+                <td> {{record.first_name}} {{record.last_name}} </td>
+
+                <td> {{record.email}} </td>
+
+                <td> {{record.phone}} </td>
+
+                <td> {{record.address}} </td>
+
+                <td> {{record.city}} </td>
+
+                <td> {{record.province}} </td>
+
+                <td> {{record.country}} </td>
+
+                <td> {{record.creation_date}} </td>
 
 
-                </td>
+        
 
             </tr>
 
-        </tbody>
+            {% endfor %}
 
+        </tbody>
+        {% endif %}
 
     </table>
 
