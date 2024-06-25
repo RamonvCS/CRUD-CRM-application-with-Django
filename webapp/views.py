@@ -49,3 +49,9 @@ def dashboard(request):
 def user_logout(request):
     auth_logout(request)
     return redirect("my-login")
+
+#  - CREATE A RECORD
+
+@login_required(login_url='my-login')
+def create_record(request):
+    
