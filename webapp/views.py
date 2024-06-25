@@ -72,6 +72,6 @@ def dashboard(request):
 
 def user_logout(request):
     
-    auth_logout(request)
+    auth.logout(request)
 
     return redirect("my-login")
