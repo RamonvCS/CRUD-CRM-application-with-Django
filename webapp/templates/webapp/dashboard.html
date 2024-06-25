@@ -2,7 +2,27 @@
 
 {% block content %}
 
-    <h1> Welcome to the dashboard page! {{user}} </h1>
+    <h5> Welcome to the dashboard page! {{user}} </h5>
+
+    <hr> 
+
+    <a class="btn btn-primary btn-sm" href={% url 'dashboard' %}></a>
+
+    {% comment %} Aqui saldra el output de los datos que estan en la base de datos ejemplo nombre {% endcomment %}
+    {% for record in records %}
+
+    {% comment %} By default Django adds a ID  {% endcomment %}
+    {{record.id}}
+
+    {{record.first_name}}
+
+    {{record.last_name}}
+
+
+
+
+
+    {% endfor %}
 
 {% endblock %}
 
