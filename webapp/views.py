@@ -53,3 +53,11 @@ def my_login(request):
     context = {'form': form}
 
     return render(request, 'webapp/my-login.html', context=context)
+
+#  ----------------------  User Logout
+
+def user_logout(request):
+    
+    auth_logout(request)
+
+    return redirect("my-login")
