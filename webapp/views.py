@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login as auth_login
 
 from django.contrib.auth.decorators import login_required
 
-# ----------- Creamos la función de Home para el HomePage
+# ----------- Creamos la función de HomePage
 def home(request): 
 
     # llamamos de template el template creado llamado index.html 
@@ -50,7 +50,7 @@ def my_login(request):
 
                 auth_login(request, user)
 
-                return redirect('my-login')
+                return redirect('dashboard')
 
     context = {'form': form}
 
