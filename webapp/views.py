@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
-from .forms import CreateUserForm, LoginForm
+from .forms import CreateUserForm, LoginForm, CreateRecordForm, UpdateRecordForm
+
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.decorators import login_required
+
 
 from .models import Record
 
@@ -55,4 +57,14 @@ def user_logout(request):
 @login_required(login_url='my-login')
 def create_record(request):
     
-    pass
+    form = CreateRecordForm()
+
+    if request.method == "POST":
+
+        form = CreateRecordForm(request.POST)
+
+        if form.is_valid():
+
+            form.save()
+
+            return redirect("dashboard")
