@@ -1,45 +1,29 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-
 from django import forms
-
 from django.contrib.auth.forms import AuthenticationForm
 from django.forms.widgets import PasswordInput, TextInput
-
 from .models import Record
 
-# register/Create a user
-
+# Register/Create a user
 class CreateUserForm(UserCreationForm):
-
     class Meta:
-        
         model = User
         fields = ['username', 'password1', 'password2']
 
-
 # Login a user
-
 class LoginForm(AuthenticationForm):
+    username = forms.CharField(widget=TextInput(attrs={'class': 'form-control', 'placeholder': 'Username'}))
+    password = forms.CharField(widget=PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'}))
 
-    username = forms.CharField(widget=TextInput())
-    password = forms.CharField(widget=PasswordInput())
-
-# ACreate a Record Form ------
-
-class AddRecordForm(forms.ModelForm):
-    
+# Create a Record Form
+class CreateRecordForm(forms.ModelForm):
     class Meta:
-        
-        model = User
+        model = Record
         fields = ['first_name', 'last_name', 'email', 'phone', 'address', 'city', 'country']
 
-# Upadate Record Form
-
+# Update Record Form
 class UpdateRecordForm(forms.ModelForm):
-    
     class Meta:
-        
-        
-        model = User
+        model = Record
         fields = ['first_name', 'last_name', 'email', 'phone', 'address', 'city', 'country']
