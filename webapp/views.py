@@ -68,3 +68,8 @@ def create_record(request):
             form.save()
 
             return redirect("dashboard")
+        
+    context = {'form': form}
+
+    return render(request, 'webaap/create-record.html', context=context)
+
