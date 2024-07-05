@@ -71,5 +71,5 @@ def create_record(request):
         
     context = {'form': form}
 
-    return render(request, 'webaap/create-record.html', context=context)
+    return render(request, 'webapp/create-record.html', context=context)
 
