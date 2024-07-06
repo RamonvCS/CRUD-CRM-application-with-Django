@@ -78,7 +78,7 @@ def create_record(request):
 @login_required(login_url='my-login')
 def update_record(request):
 
-    pass
+    record =  Record.objects.get(id=pk)
 
 
 
