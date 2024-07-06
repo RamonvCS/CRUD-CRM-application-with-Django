@@ -75,6 +75,10 @@ def create_record(request):
 
 # Update a Record 
 
+@login_required(login_url='my-login')
+def update_record(request):
+
+    pass
 
 
 
