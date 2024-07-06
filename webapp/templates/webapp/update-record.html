@@ -6,31 +6,31 @@
 
 <body>
 
-    <!-- Contenedor principal para el formulario de creación de registros -->
+    <!-- Main container for the record update form -->
     <div class="container bg-light shadow-md p-5 form-layout">
 
-        <!-- Título principal de la página -->
+        <!-- Main page title -->
         <h3> Update record </h3>
 
-        <!-- Subtítulo con instrucciones -->
+        <!-- Subtitle with instructions -->
         <h6> Update your record down below </h6>
 
-        <!-- Línea horizontal de separación -->
+        <!-- Horizontal line for separation -->
         <hr>
         <br>
 
-        <!-- Formulario para la creación de registros -->
+        <!-- Form for updating records -->
         <form method="POST" autocomplete="off">
 
-            <!-- Token CSRF para protección contra ataques CSRF -->
+            <!-- CSRF token for protection against CSRF attacks -->
             {% csrf_token %}
 
-            <!-- Renderiza el formulario usando crispy_forms -->
+            <!-- Render the form using crispy_forms -->
             {{ form|crispy }}
 
             <br>
 
-            <!-- Botón para enviar el formulario -->
+            <!-- Button to submit the form -->
             <button type="submit" class="btn btn-primary w-100 btn-block p-2"> Update record </button>
         </form>
 
