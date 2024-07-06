@@ -1,17 +1,35 @@
-{% exteends 'webapp/base.html '%}
+{% extends 'webapp/base.html' %}
 
 {% block content %}
 
-
     <div class="card">
+
+        <strong>
+            {{record.last_name}}
+
+            {{record.first_name}}
+
+        </strong>
+
         <div class="card-body">
 
             <p><strong>ID:</strong> {{ record.id }}</p>
             
+            {% comment %} <p><strong>First Name:</strong> {{ record.first_name }}</p>
+
+            <p><strong>Last Name:</strong> {{ record.last_name }}</p> {% endcomment %}
+            
             <p><strong>Email:</strong> {{ record.email }}</p>
+
+            <p><strong>Phone number :</strong> {{ record.phone }}</p>
+
+            <p><strong>Address:</strong> {{ record.address }}</p>
+            
+            <p><strong>City:</strong> {{ record.city }}</p>
+            
+            <p><strong>Country:</strong> {{ record.country }}</p>
 
         </div>
     </div>
-
 
 {% endblock %}
