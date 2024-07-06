@@ -1,0 +1,40 @@
+{% extends 'webapp/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<body>
+
+    <!-- Contenedor principal para el formulario de creación de registros -->
+    <div class="container bg-light shadow-md p-5 form-layout">
+
+        <!-- Título principal de la página -->
+        <h3> Update record </h3>
+
+        <!-- Subtítulo con instrucciones -->
+        <h6> Update your record down below </h6>
+
+        <!-- Línea horizontal de separación -->
+        <hr>
+        <br>
+
+        <!-- Formulario para la creación de registros -->
+        <form method="POST" autocomplete="off">
+
+            <!-- Token CSRF para protección contra ataques CSRF -->
+            {% csrf_token %}
+
+            <!-- Renderiza el formulario usando crispy_forms -->
+            {{ form|crispy }}
+
+            <br>
+
+            <!-- Botón para enviar el formulario -->
+            <button type="submit" class="btn btn-primary w-100 btn-block p-2"> Update record </button>
+        </form>
+
+    </div>
+</body>   
+
+{% endblock %}

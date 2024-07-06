@@ -82,5 +82,17 @@ def update_record(request):
 
     form = UpdateRecordForm(instance=record)
 
+    if request.method == 'POST':
+
+        form = UpdateRecordForm(request.POST, instance=record)
+
+        if form.is_valed():
+
+            return redirect("dashboard")
+    
+    context = {'form :form'}
+
+    return render(request, 'webapp/update-record.html', context=context)
+
 
 
