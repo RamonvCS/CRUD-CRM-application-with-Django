@@ -21,4 +21,4 @@ urlpatterns = [
     path('update-record/<int:pk>' views.update_record, name='update-record' ),
 ]
 
-# CRUD 
+
