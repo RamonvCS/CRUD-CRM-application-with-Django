@@ -80,5 +80,7 @@ def update_record(request):
 
     record =  Record.objects.get(id=pk)
 
+    form = UpdateRecordForm(instance=record)
+
 
 
