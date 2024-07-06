@@ -25,4 +25,6 @@ urlpatterns = [
 
     # Path for updating an existing record, calls the update_record view
     path('update-record/<int:pk>', views.update_record, name='update-record'),
+
+    path('record/<int:pk> ', views.singular_record, name="record"),
 ]
