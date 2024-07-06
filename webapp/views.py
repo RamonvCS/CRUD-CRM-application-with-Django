@@ -1,28 +1,28 @@
 from django.shortcuts import render, redirect
 from .forms import CreateUserForm, LoginForm, CreateRecordForm, UpdateRecordForm
-
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.decorators import login_required
-
-
 from .models import Record
 
-# ----------- Creamos la función de HomePage
+# ----------- Function to render the HomePage
+
 def home(request): 
     return render(request, 'webapp/index.html')
 
-# ---------- Creamos la función de Register User
+# ----------- Function to register a new user
+
 def register(request):
     form = CreateUserForm()
     if request.method == "POST":
-        form = CreateUserForm(request.POST) 
+        form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('my-login')
     context = {'form': form}
     return render(request, 'webapp/register.html', context=context)
 
-# ---------- Login a user
+# ----------- Function to log in a user
+
 def my_login(request):
     form = LoginForm()
     if request.method == "POST":
@@ -37,68 +37,51 @@ def my_login(request):
     context = {'form': form}
     return render(request, 'webapp/my-login.html', context=context)
 
-# - Dashboard
+# ----------- Function to render the Dashboard, requires login
+
 @login_required(login_url='my-login')
 def dashboard(request):
-
     my_records = Record.objects.all()
-
     context = {'records': my_records}
-
     return render(request, 'webapp/dashboard.html', context=context)
 
-#  ----------------------  User Logout
+# ----------- Function to log out a user
+
 def user_logout(request):
     auth_logout(request)
     return redirect("my-login")
 
-#  - CREATE A RECORD
+# ----------- Function to create a new record, requires login
 
 @login_required(login_url='my-login')
 def create_record(request):
-    
     form = CreateRecordForm()
-
     if request.method == "POST":
-
         form = CreateRecordForm(request.POST)
-
         if form.is_valid():
-
             form.save()
-
             return redirect("dashboard")
-        
     context = {'form': form}
-
     return render(request, 'webapp/create-record.html', context=context)
 
-# Update a Record 
+# ----------- Function to update an existing record, requires login
 
 @login_required(login_url='my-login')
 def update_record(request, pk):
-
-    record =  Record.objects.get(id=pk)
-
+    record = Record.objects.get(id=pk)
     form = UpdateRecordForm(instance=record)
-
     if request.method == 'POST':
-
         form = UpdateRecordForm(request.POST, instance=record)
-
-        if form.is_valed():
-
+        if form.is_valid():
+            form.save()  # Save the changes to the record
             return redirect("dashboard")
-    
-    context = {'form :form'}
-
+    context = {'form': form}
     return render(request, 'webapp/update-record.html', context=context)
 
-
-
-# - Read / View a singular record 
+# ----------- Function to read/view a singular record, requires login
 
 @login_required(login_url='my-login')
-def update_record(request, pk):
-
-    pass 
+def view_record(request, pk):
+    record = Record.objects.get(id=pk)
+    context = {'record': record}
+    return render(request, 'webapp/view-record.html', context=context)
