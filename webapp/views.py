@@ -76,7 +76,7 @@ def create_record(request):
 # Update a Record 
 
 @login_required(login_url='my-login')
-def update_record(request):
+def update_record(request, pk):
 
     record =  Record.objects.get(id=pk)
 
@@ -96,3 +96,9 @@ def update_record(request):
 
 
 
+# - Read / View a singular record 
+
+@login_required(login_url='my-login')
+def update_record(request, pk):
+
+    pass 
