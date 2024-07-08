@@ -7,13 +7,13 @@
 <body>
 
     <!-- Main container for the record update form -->
-    <div class="container bg-light shadow-md p-5 form-layout">
+    <div class="container bg-light shadow-md p-5 form-layout" style="max-width: 600px; margin: auto; padding-top: 30px; padding-bottom: 30px; border-radius: 10px;">
 
         <!-- Main page title -->
-        <h3> Update record </h3>
+        <h3 class="text-center">Update Record</h3>
 
         <!-- Subtitle with instructions -->
-        <h6> Update your record down below </h6>
+        <h6 class="text-center">Update your record down below</h6>
 
         <!-- Horizontal line for separation -->
         <hr>
@@ -30,8 +30,11 @@
 
             <br>
 
-            <!-- Button to submit the form -->
-            <button type="submit" class="btn btn-primary w-100 btn-block p-2"> Update record </button>
+            <!-- Buttons to submit the form and return -->
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary w-100 mr-2">Update Record&nbsp;<i class="fa fa-check"></i></button>
+                <a href="{% url 'dashboard' %}" class="btn btn-secondary w-100 ml-2" style="background-color: #f0ad4e; color: white;">Return&nbsp;<i class="fa fa-arrow-left"></i></a>
+            </div>
         </form>
 
     </div>

@@ -2,49 +2,32 @@
 
 {% block content %}
 
-    <div class="card">
-
-        <strong>
-            <br>
-            &nbsp;   &nbsp;
-
-            {{record.last_name}}
-
-            {{record.first_name}}
-
-        </strong>
+    <div class="card mx-auto" style="max-width: 600px; margin-top: 30px; padding: 20px; border-radius: 10px;">
+        <div class="d-flex align-items-center">
+            <i class="fa fa-user-circle-o" aria-hidden="true" style="font-size: 48px; margin-right: 10px;"></i>
+            <strong style="font-size: 24px;">
+                {{ record.last_name }} {{ record.first_name }}
+            </strong>
+        </div>
 
         <hr>
 
-        <div class="card-body">
-
-            <p><strong>ID:</strong> {{ record.id }}</p>
-            
-            {% comment %} <p><strong>First Name:</strong> {{ record.first_name }}</p>
-
-            <p><strong>Last Name:</strong> {{ record.last_name }}</p> {% endcomment %}
-            
-            <p><strong>Email:</strong> {{ record.email }}</p>
-
-            <p><strong>Phone number :</strong> {{ record.phone }}</p>
-
-            <p><strong>Address:</strong> {{ record.address }}</p>
-            
-            <p><strong>City:</strong> {{ record.city }}</p>
-            
-            <p><strong>Country:</strong> {{ record.country }}</p>
-
+        <div class="card-body" style="font-family: Arial, sans-serif;">
+            <p><i class="fa fa-id-card" aria-hidden="true"></i>&nbsp;<strong>ID:</strong> {{ record.id }}</p>
+            <p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;<strong>Email:</strong> {{ record.email }}</p>
+            <p><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;<strong>Phone number:</strong> {{ record.phone }}</p>
+            <p><i class="fa fa-home" aria-hidden="true"></i>&nbsp;<strong>Address:</strong> {{ record.address }}</p>
+            <p><i class="fa fa-building" aria-hidden="true"></i>&nbsp;<strong>City:</strong> {{ record.city }}</p>
+            <p><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;<strong>Country:</strong> {{ record.country }}</p>
         </div>
-
     </div>
 
     <br>
 
-    <a href="{% url 'dashboard' %}" class="btn btn-secondary">Return</a> 
-    &nbsp;
-    <a href="{% url 'update-record' record.id %}" class="btn btn-info">Update record</a> 
-    &nbsp; 
-    <a href="{% url 'delete-record' record.id %}" class="btn btn-danger">Delete</a> 
-    &nbsp;
+    <div class="d-flex justify-content-between" style="max-width: 600px; margin: auto;">
+        <a href="{% url 'dashboard' %}" class="btn btn-secondary" style="background-color: #f0ad4e; color: white; flex: 1; margin-right: 5px;">Return <i class="fa fa-arrow-left"></i></a>
+        <a href="{% url 'update-record' record.id %}" class="btn btn-info" style="flex: 1; margin-right: 5px;">Update record <i class="fa fa-pencil"></i></a>
+        <a href="{% url 'delete-record' record.id %}" class="btn btn-danger" style="flex: 1;">Delete <i class="fa fa-trash"></i></a>
+    </div>
 
 {% endblock %}

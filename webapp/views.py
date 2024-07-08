@@ -3,6 +3,7 @@ from .forms import CreateUserForm, LoginForm, CreateRecordForm, UpdateRecordForm
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from .models import Record
+from django.contrib import messages
 
 # ----------- Function to render the HomePage
 def home(request): 
@@ -16,7 +17,13 @@ def register(request):
     if request.method == "POST":
         form = CreateUserForm(request.POST)
         if form.is_valid():
+
             form.save()
+
+            messages.success(request, "Account created successfully!")
+
+
+
             return redirect('my-login')
 
     context = {'form': form}
@@ -35,8 +42,13 @@ def my_login(request):
             password = request.POST.get('password')
             user = authenticate(request, username=username, password=password)
             if user is not None:
+
                 auth_login(request, user)
+
+                messages.success(request, "You have logged In")
+
                 return redirect('dashboard')
+            
 
     context = {'form': form}
 
@@ -68,7 +80,11 @@ def create_record(request):
     if request.method == "POST":
         form = CreateRecordForm(request.POST)
         if form.is_valid():
+
             form.save()
+
+            messages.success(request, "Your Record was created!")
+
             return redirect("dashboard")
 
     context = {'form': form}
