@@ -22,11 +22,18 @@ class CreateRecordForm(forms.ModelForm):
         model = Record
         fields = ['first_name', 'last_name', 'email', 'phone', 'address', 'city', 'country']
 
+    def __init__(self, *args, **kwargs):
+        super(CreateRecordForm, self).__init__(*args, **kwargs)
+        for field in self.fields.values():
+            field.widget.attrs['class'] = 'form-control'
+
 # Update Record Form
 class UpdateRecordForm(forms.ModelForm):
     class Meta:
         model = Record
         fields = ['first_name', 'last_name', 'email', 'phone', 'address', 'city', 'country']
 
-
-#
+    def __init__(self, *args, **kwargs):
+        super(UpdateRecordForm, self).__init__(*args, **kwargs)
+        for field in self.fields.values():
+            field.widget.attrs['class'] = 'form-control'
