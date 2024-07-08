@@ -2,7 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-
     # Path for the homepage, calls the home view
     path('', views.home, name="home"),
 
@@ -26,7 +25,9 @@ urlpatterns = [
     # Path for updating an existing record, calls the update_record view
     path('update-record/<int:pk>', views.update_record, name='update-record'),
 
-    path('record/<int:pk> ', views.singular_record, name="record"),
+    # Path for viewing a singular record, calls the singular_record view
+    path('record/<int:pk>', views.singular_record, name="record"),
 
-    path('delete-record/<int:pk>', views.delete_record, name-="delete-record"),
+    # Path for deleting a record, calls the delete_record view
+    path('delete-record/<int:pk>', views.delete_record, name="delete-record"),
 ]

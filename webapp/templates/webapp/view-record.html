@@ -40,17 +40,11 @@
 
     <br>
 
-    <a href="{% url 'dashboard' %}" class="btn btn-secondary"> Return</a> 
-
+    <a href="{% url 'dashboard' %}" class="btn btn-secondary">Return</a> 
     &nbsp;
-
-    <a href="{% url 'update-record' record.id %}" class="btn btn-info"> Update record</a> 
-
+    <a href="{% url 'update-record' record.id %}" class="btn btn-info">Update record</a> 
     &nbsp; 
-
-    {% comment %} <a href="{% url '' %}" class="btn btn-danger"> Delete </a>  {% endcomment %}
-
+    <a href="{% url 'delete-record' record.id %}" class="btn btn-danger">Delete</a> 
     &nbsp;
-
 
 {% endblock %}

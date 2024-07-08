@@ -93,8 +93,7 @@ def update_record(request, pk):
 
     return render(request, 'webapp/update-record.html', context=context)
 
-#  - Read / View a singular record
-
+# ----------- Function to view a singular record
 @login_required(login_url='my-login')
 def singular_record(request, pk):
 
@@ -104,13 +103,10 @@ def singular_record(request, pk):
 
     return render(request, 'webapp/view-record.html', context=context)
 
-# -------  Delete a Record 
-
+# ----------- Function to delete a record without a template
 @login_required(login_url='my-login')
 def delete_record(request, pk):
 
-    record = Record.objects.get(id.pk)
-
+    record = Record.objects.get(pk=pk)
     record.delete()
-
     return redirect("dashboard")
