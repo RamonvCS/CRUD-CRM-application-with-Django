@@ -5,11 +5,16 @@
     <div class="card">
 
         <strong>
+            <br>
+            &nbsp;   &nbsp;
+
             {{record.last_name}}
 
             {{record.first_name}}
 
         </strong>
+
+        <hr>
 
         <div class="card-body">
 
@@ -43,7 +48,9 @@
 
     &nbsp; 
 
-    <a href="{% url '' %}" class="btn btn-danger"> Delete </a> 
+    {% comment %} <a href="{% url '' %}" class="btn btn-danger"> Delete </a>  {% endcomment %}
+
+    &nbsp;
 
 
 {% endblock %}
