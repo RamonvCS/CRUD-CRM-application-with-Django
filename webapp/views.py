@@ -66,8 +66,11 @@ def dashboard(request):
 
 # ----------- Function to log out a user
 def user_logout(request):
+    
 
     auth_logout(request)
+
+    messages.success(request, "Logout success!")
 
     return redirect("my-login")
 
@@ -102,7 +105,11 @@ def update_record(request, pk):
     if request.method == 'POST':
         form = UpdateRecordForm(request.POST, instance=record)
         if form.is_valid():
+
             form.save()  # Save the changes to the record
+
+            messages.success(request, "Your recorc was updated!")
+
             return redirect("dashboard")
 
     context = {'form': form}
@@ -125,4 +132,7 @@ def delete_record(request, pk):
 
     record = Record.objects.get(pk=pk)
     record.delete()
+
+    messages.success(request, "Your record was deleted!")
+
     return redirect("dashboard")
