@@ -6,32 +6,33 @@
 
     <body>
 
-        <!-- Contenedor principal para el formulario de creación de registros -->
+        <!-- Main container for the record creation form -->
         <div class="container bg-light shadow-md p-5 form-layout">
 
-            <!-- Título principal de la página -->
-            <h3> Crear registro </h3>
+            <!-- Main title of the page -->
+            <h3> Create Record </h3>
 
-            <!-- Subtítulo con instrucciones -->
-            <h6> Comienza a agregar los detalles requeridos para tu registro. </h6>
+            <!-- Subtitle with instructions -->
+            <h6> Start adding the required details for your record. </h6>
 
-            <!-- Línea horizontal de separación -->
+            <!-- Horizontal line separator -->
             <hr>
             <br>
 
-            <!-- Formulario para la creación de registros -->
+            <!-- Form for record creation -->
             <form method="POST" autocomplete="off">
 
-                <!-- Token CSRF para protección contra ataques CSRF -->
+                <!-- CSRF token for CSRF protection -->
                 {% csrf_token %}
 
-                <!-- Renderiza el formulario usando crispy_forms -->
+                <!-- Render the form using crispy_forms -->
                 {{ form|crispy }}
 
                 <br>
 
-                <!-- Botón para enviar el formulario -->
-                <button type="submit" class="btn btn-primary w-100 btn-block p-2"> Crear cuenta </button>
+                <!-- Button to submit the form -->
+                <button type="submit" class="btn btn-primary w-100 btn-block p-2"> Create record&nbsp;<i class="fa fa-check" aria-hidden="true"></i>
+                </button>
             </form>
 
         </div>
