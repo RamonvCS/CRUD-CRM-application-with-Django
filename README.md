@@ -34,7 +34,7 @@ Here are some images related to the project:
 
 Here are some images related to the project:
 
-1. ![Add Record](crm/crm/imgs/addrecord.png)
+1. ![Add Record](crm/imgs/addrecord.png)
 2. ![Create Record Table](crm/crm/imgs/create_record_table.png)
 3. ![Create Record](crm/crm/imgs/create_record.png)
 4. ![Dashboard](crm/crm/imgs/dashboard1.png)
