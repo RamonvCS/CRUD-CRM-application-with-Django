@@ -4,17 +4,21 @@
 {% block content %}
 
 <style>
-    .full-height {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .form-container {
+        margin-top: 20px;  /* Adjusted margin to make it closer to the navbar */
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .btn-custom {
+        width: auto;
+        padding: 10px 20px;
     }
 </style>
 
-<div class="container bg-light shadow-md p-5 form-layout full-height">
-
-    <div style="width: 100%; max-width: 500px;">
+<div class="container">
+    <div class="form-container bg-light shadow-md mx-auto">
         <h3 class="text-center">Start managing your clients today!</h3>
 
         <hr>
@@ -24,16 +28,15 @@
             {% csrf_token %}
             {{ form|crispy }}
             <br>
-            <button type="submit" class="btn btn-primary w-100 btn-block p-2">Create account&nbsp;<i class="fa fa-user-plus" aria-hidden="true"></i></button>
+            <button type="submit" class="btn btn-primary btn-custom">Create account&nbsp;<i class="fa fa-user-plus" aria-hidden="true"></i></button>
         </form>
 
         <br>
 
         <div class="text-center">
-            <p>Already have an account?</p> <a href="{% url 'my-login' %}" class="blue-link">Login</a>
+            <p>Already have an account?</p> <a href="{% url 'my-login' %}" class="text-primary">Login</a>
         </div>
     </div>
-
 </div>
 
 {% endblock %}
