@@ -3,11 +3,19 @@
 
 {% block content %}
 
-<body>
+<style>
+    .full-height {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
 
-    <div class="container bg-light shadow-md p-5 form-layout">
+<div class="container bg-light shadow-md p-5 form-layout full-height">
 
-        <h3> Start managing your clients today! </h3>
+    <div style="width: 100%; max-width: 500px;">
+        <h3 class="text-center">Start managing your clients today!</h3>
 
         <hr>
         <br>
@@ -22,13 +30,10 @@
         <br>
 
         <div class="text-center">
-            <p>Already have an account?</p> <a href="{% url 'my-login' %}">Login</a>
+            <p>Already have an account?</p> <a href="{% url 'my-login' %}" class="blue-link">Login</a>
         </div>
-
     </div>
 
-    <br>
-
-</body>
+</div>
 
 {% endblock %}

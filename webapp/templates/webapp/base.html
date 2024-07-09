@@ -18,29 +18,19 @@
 <body>
 
     {% comment %} Navbar  {% endcomment %}
-
-     {% include "webapp/navbar.html" %}
+    {% include "webapp/navbar.html" %}
 
     <div class="container">
-
-        {% comment %} nofitifacation messages  {% endcomment %}
-
-        {% for message in messages %}
-
-           {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}%
-
-                <P class="alert alert-success float-center text-center">
-
-                    <i class="fa fa-check" aria-hidden="true"></i> &nbsp; {{message}}
-
-                </p>
-
-        {% endfor %}
-
         <br>
-
+        {% for message in messages %}
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                <p class="alert alert-success float-center text-center message-text">
+                    <i class="fa fa-check" aria-hidden="true"></i> &nbsp; {{ message }}
+                </p>
+            {% endif %}
+        {% endfor %}
+        <br>
         {% block content %}
-
         {% endblock %}
     </div>
    
