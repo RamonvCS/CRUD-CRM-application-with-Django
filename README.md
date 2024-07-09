@@ -32,19 +32,17 @@ This project uses the following technologies:
 
 Here are some images related to the project:
 
-Here are some images related to the project:
-
-1. ![Add Record](crm/imgs/addrecord.png)
-2. ![Create Record Table](crm/crm/imgs/create_record_table.png)
-3. ![Create Record](crm/crm/imgs/create_record.png)
-4. ![Dashboard](crm/crm/imgs/dashboard1.png)
-5. ![Homepage](crm/crm/imgs/homepage.png)
-6. ![Login](crm/crm/imgs/login_.png)
-7. ![Logout Successful](crm/crm/imgs/logout_successfull.png)
-8. ![Record Created](crm/crm/imgs/record_created.png)
-9. ![Record Deleted](crm/crm/imgs/record_deleted.png)
-10. ![Update Record](crm/crm/imgs/update_record.png)
-11. ![View Record](crm/crm/imgs/view_record.png)
+1. ![Homepage](crm/imgs/homepage.png)
+2. ![Login](crm/imgs/login_.png)
+3. ![Dashboard](crm/imgs/dashboard1.png)
+4. ![Add Record](crm/imgs/addrecord.png)
+5. ![Create Record](crm/imgs/create_record.png)
+6. ![Create Record Table](crm/imgs/create_record_table.png)
+7. ![Record Created](crm/imgs/record_created.png)
+8. ![Update Record](crm/imgs/update_record.png)
+9. ![View Record](crm/imgs/view_record.png)
+10. ![Record Deleted](crm/imgs/record_deleted.png)
+11. ![Logout Successful](crm/imgs/logout_successfull.png)
 
 ## Installation
 
