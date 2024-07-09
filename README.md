@@ -2,16 +2,16 @@
 
 A CRUD and CRM application developed using Django. This project provides a complete solution for managing customer relationships and performing basic CRUD operations on data. The application features user registration, login, and authentication, allowing users to securely manage their data. Additionally, it includes a modern and responsive user interface built with Bootstrap.
 
-What is CRM?
+### What is CRM?
 CRM stands for Customer Relationship Management. It is a strategy and technology used by businesses to manage and analyze customer interactions and data throughout the customer lifecycle. The goal is to improve customer service relationships, assist in customer retention, and drive sales growth. CRM systems compile customer data across different channels, including contact information, purchase history, and any interactions with customer service representatives.
 
-What is CRUD?
+### What is CRUD?
 CRUD stands for Create, Read, Update, and Delete. It refers to the four basic operations that can be performed on data in a database.
 
-- Create: Adding new data to the database.
-- Read: Retrieving and displaying data from the database.
-- Update: Modifying existing data in the database.
-- Delete: Removing data from the database.
+- **Create**: Adding new data to the database.
+- **Read**: Retrieving and displaying data from the database.
+- **Update**: Modifying existing data in the database.
+- **Delete**: Removing data from the database.
 
 ## Technologies Used
 
@@ -28,17 +28,21 @@ This project uses the following technologies:
 - **Git**: Version control system used to manage the project source code.
 - **GitHub**: Code hosting platform used to collaborate and manage the project repository.
 
-
 ## Images
 
-Here are six images related to the project:
+Here are some images related to the project:
 
-1. ![Image 1](path/to/image1.png)
-2. ![Image 2](path/to/image2.png)
-3. ![Image 3](path/to/image3.png)
-4. ![Image 4](path/to/image4.png)
-5. ![Image 5](path/to/image5.png)
-6. ![Image 6](path/to/image6.png)
+1. ![Add Record](crm/crm/imgs/addrecord.png)
+2. ![Create Record Table](crm/crm/imgs/create_record_table.png)
+3. ![Create Record](crm/crm/imgs/create_record.png)
+4. ![Dashboard](crm/crm/imgs/dashboard1.png)
+5. ![Homepage](crm/crm/imgs/homepage.png)
+6. ![Login](crm/crm/imgs/login_.png)
+7. ![Logout Successful](crm/crm/imgs/logout_successfull.png)
+8. ![Record Created](crm/crm/imgs/record_created.png)
+9. ![Record Deleted](crm/crm/imgs/record_deleted.png)
+10. ![Update Record](crm/crm/imgs/update_record.png)
+11. ![View Record](crm/crm/imgs/view_record.png)
 
 ## Installation
 
@@ -92,8 +96,6 @@ Contributions are welcome. Please follow these steps to contribute:
 3. Make your changes and commit them (`git commit -am 'Add new feature'`).
 4. Push your changes to your branch (`git push origin feature/new-feature`).
 5. Open a Pull Request.
-
-
 
 ## Contact
 
