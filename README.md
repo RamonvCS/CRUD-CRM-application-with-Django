@@ -32,6 +32,8 @@ This project uses the following technologies:
 
 Here are some images related to the project:
 
+Here are some images related to the project:
+
 1. ![Add Record](crm/crm/imgs/addrecord.png)
 2. ![Create Record Table](crm/crm/imgs/create_record_table.png)
 3. ![Create Record](crm/crm/imgs/create_record.png)
