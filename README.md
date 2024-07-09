@@ -42,7 +42,7 @@ Here are some images related to the project:
 8. ![Update Record](crm/imgs/update_record.png)
 9. ![View Record](crm/imgs/view_record.png)
 10. ![Record Deleted](crm/imgs/record_deleted.png)
-11. ![Logout Successful](crm/imgs/logout_successfull.png)
+11. ![Logout Successful](crm/imgs/logoutsuccessfull.png)
 
 ## Installation
 
